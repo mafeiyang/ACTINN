@@ -16,25 +16,33 @@ We use HDF5 format for the scRNA-Seq expressiong matrix, which stores the compre
 ```
 python nnict_format.py -i input_file -o output_prefix -f format
 ```
+
 ### Paramters:
 * -i    Path to the input file or the 10X directory
 * -o    Prefix of the output file
 * -f    Format of the input file (10X, txt, csv)
 
 ### Examples
+
 #### Convert 10X format
 ```
 python nnict_format.py -i ./data/pbmc_10x/GRCh38 -o pbmc_10x -f 10X
 ```
+
 #### Convert txt format
 ```
 python nnict_format.py -i ./data/pbmc.txt -o pbmc -f txt
 ```
 
 ## Predict cell type
-We 
+We train a 4 layer (3 hidden layers) neural network on scRNA-Seq datasets with predifined cell types, then we use the trained parameters to predict cell types for other datasets.
 
+### Usage
+```
+python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr learning_rate -ne number_epoch -ms minibatch_size -pc print-cost
+```
 
+###
 
 
 
