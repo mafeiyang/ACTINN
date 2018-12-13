@@ -34,7 +34,7 @@ python nnict_format.py -i ./data/pbmc_10x/GRCh38 -o pbmc_10x -f 10X
 python nnict_format.py -i ./data/pbmc.txt -o pbmc -f txt
 ```
 
-## Predict cell type
+## Predict cell types
 We train a 4 layer (3 hidden layers) neural network on scRNA-Seq datasets with predifined cell types, then we use the trained parameters to predict cell types for other datasets.
 
 ### Usage
