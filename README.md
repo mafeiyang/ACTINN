@@ -1,7 +1,7 @@
 # Neural Network Identifies Cell Types in scRNA-Seq
 
 ## Overview
-NNICT (Neural Network Identifies Cell Types in scRNA-Seq) is a useful tool to quickly and accurately identify cell types in scRNA-Seq. For details, please read the paper:
+NNICT (Neural Network Identifies Cell Types in scRNA-Seq) is a bioinformatic tool to quickly and accurately identify cell types in scRNA-Seq. For details, please read the paper:
 
 ## Prerequisite
 python 3.6
