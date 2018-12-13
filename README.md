@@ -17,7 +17,7 @@ We use HDF5 format for the scRNA-Seq expressiong matrix, which stores the compre
 python nnict_format.py -i input_file -o output_prefix -f format
 ```
 
-### Paramters:
+### Paramters
 * -i    Path to the input file or the 10X directory
 * -o    Prefix of the output file
 * -f    Format of the input file (10X, txt, csv)
