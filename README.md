@@ -18,9 +18,9 @@ python nnict_format.py -i input_file -o output_prefix -f format
 ```
 
 ### Paramters
-* -i    Path to the input file or the 10X directory
-* -o    Prefix of the output file
-* -f    Format of the input file (10X, txt, csv)
+* -i	Path to the input file or the 10X directory
+* -o	Prefix of the output file
+* -f	Format of the input file (10X, txt, csv)
 
 ### Examples
 
@@ -43,13 +43,13 @@ python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr 0
 ```
 
 ### Parameters
-* -trs Path to the training set, must be HDF5 format with key "dge"
-* -trl Path to the training label (the cell types for the training set), must be txt format
-* -ts Path to test sets, must be HDF5 format with key "dge"
-* -lr Learning rate (default: 0.0001)
-* -ne Number of epochs (default: 50)
-* -ms Minibatch size (default: 128)
-* -pc Print cost (default: True)
+* -trs	Path to the training set, must be HDF5 format with key "dge"
+* -trl	Path to the training label (the cell types for the training set), must be txt format
+* -ts	Path to test sets, must be HDF5 format with key "dge"
+* -lr	Learning rate (default: 0.0001)
+* -ne	Number of epochs (default: 50)
+* -ms	Minibatch size (default: 128)
+* -pc	Print cost (default: True)
 
 ### Example
 ```
