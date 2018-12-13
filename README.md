@@ -10,7 +10,7 @@ python packages:
 tensorflow 1.10+, numpy 1.14+, pandas 0.23+, argparse 1.1+, scipy 1.1+, scanpy 1.3+
 
 ## Convert format
-We use HDF5 format for the scRNA-Seq expressiong matrix, which stores the compressed matrix and is fast to load. To convert the format, we first read the expression matrix as a pandas dataframe, then we use the to_hdf function to save the file as h5 format. For the to_hdf function, we use "dge", which stands for digital gene expression, for the key parameter.
+We use HDF5 format for the scRNA-Seq expressiong matrix, which stores the compressed matrix and is fast to load. To convert the format, we first read the expression matrix as a pandas dataframe, then we use the to_hdf function to save the file as HDF5 format. For the to_hdf function, we use "dge", which stands for digital gene expression, for the key parameter.
 
 ### Usage
 ```
@@ -39,12 +39,22 @@ We train a 4 layer (3 hidden layers) neural network on scRNA-Seq datasets with p
 
 ### Usage
 ```
-python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr learning_rate -ne number_epoch -ms minibatch_size -pc print-cost
+python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr 0.0001 -ne 50 -ms 128 -pc True
 ```
 
-###
+### Parameters
+* -trs Path to the training set, must be HDF5 format with key "dge"
+* -trl Path to the training label (the cell types for the training set), must be txt format
+* -ts Path to test sets, must be HDF5 format with key "dge"
+* -lr Learning rate (default: 0.0001)
+* -ne Number of epochs (default: 50)
+* -ms Minibatch size (default: 128)
+* -pc Print cost (default: True)
 
-
+### Example
+```
+python nnict_predict.py -trs ./pbmc_set.h5 -trl pbmc_label.txt.gz -ts test_set.h5 -lr 0.0001 -ne 50 -ms 128 -pc True
+```
 
 
 
