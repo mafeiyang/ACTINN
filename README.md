@@ -55,12 +55,3 @@ python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr 0
 ```
 python nnict_predict.py -trs ./pbmc_set.h5 -trl pbmc_label.txt.gz -ts test_set.h5 -lr 0.0001 -ne 50 -ms 128 -pc True
 ```
-
-### To be continue
-
-
-
-
-
-
-
