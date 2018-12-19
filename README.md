@@ -22,6 +22,9 @@ python nnict_format.py -i input_file -o output_prefix -f format
 * -o	Prefix of the output file
 * -f	Format of the input file (10X, txt, csv)
 
+### Output
+The output will be an HDF5 formated file named after the output prefix with ".h5" extension
+
 ### Examples
 
 #### Convert 10X format
@@ -44,12 +47,15 @@ python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr l
 
 ### Parameters
 * -trs	Path to the training set, must be HDF5 format with key "dge"
-* -trl	Path to the training label (the cell types for the training set), must be txt format
+* -trl	Path to the training label (the cell types for the training set), must be tab separated text file with no column and row names
 * -ts	Path to test sets, must be HDF5 format with key "dge"
 * -lr	Learning rate (default: 0.0001)
 * -ne	Number of epochs (default: 50)
 * -ms	Minibatch size (default: 128)
 * -pc	Print cost (default: True)
+
+### Output
+The output will be a file named "predicted_label.txt". In the file, the first column will be the cell name, the second column will be the predicted cell type.
 
 ### Example
 ```
