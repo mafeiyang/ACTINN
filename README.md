@@ -39,7 +39,7 @@ We train a 4 layer (3 hidden layers) neural network on scRNA-Seq datasets with p
 
 ### Usage
 ```
-python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr 0.0001 -ne 50 -ms 128 -pc True
+python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr learning_rat -ne num_epoch -ms minibatch_size -pc print_cost
 ```
 
 ### Parameters
@@ -53,5 +53,5 @@ python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr 0
 
 ### Example
 ```
-python nnict_predict.py -trs ./pbmc_set.h5 -trl pbmc_label.txt.gz -ts test_set.h5 -lr 0.0001 -ne 50 -ms 128 -pc True
+python nnict_predict.py -trs ./test_data/train_set.h5 -trl ./test_data/train_label.txt.gz -ts ./test_data/test_set.h5 -lr 0.0001 -ne 50 -ms 128 -pc True
 ```
