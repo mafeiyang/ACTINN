@@ -3,7 +3,7 @@
 ## Overview
 NNICT (Neural Network Identifies Cell Types in scRNA-Seq) is a bioinformatic tool to quickly and accurately identify cell types in scRNA-Seq. For details, please read the paper:
 All datasets used in the paper are available here:
-
+https://drive.google.com/drive/folders/1_X3DI1zYQU6GrHJQcHytx4rJ6DUWrSuc?usp=sharing
 
 ## Prerequisite
 python 3.6
@@ -31,12 +31,17 @@ The output will be an HDF5 formated file named after the output prefix with ".h5
 
 #### Convert 10X format
 ```
-python nnict_format.py -i ./data/pbmc_10x/GRCh38 -o pbmc_10x -f 10X
+python nnict_format.py -i ./test_data/train_set_10x -o train_set -f 10X
 ```
 
 #### Convert txt format
 ```
-python nnict_format.py -i ./data/pbmc.txt -o pbmc -f txt
+python nnict_format.py -i ./test_data/train_set.txt.gz -o train_set -f txt
+```
+
+#### Convert csv format
+```
+python nnict_format.py -i ./test_data/train_set.csv.gz -o train_set -f csv
 ```
 
 ## Predict cell types
