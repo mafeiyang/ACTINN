@@ -1,7 +1,7 @@
-# Neural Network Identifies Cell Types in scRNA-Seq
+# Automated Cell Type Identification using Neural Networks
 
 ## Overview
-NNICT (Neural Network Identifies Cell Types in scRNA-Seq) is a bioinformatic tool to quickly and accurately identify cell types in scRNA-Seq. For details, please read the paper:
+ACTINN (Automated Cell Type Identification using Neural Networks) is a bioinformatic tool to quickly and accurately identify cell types in scRNA-Seq. For details, please read the paper:
 All datasets used in the paper are available here:
 https://drive.google.com/drive/folders/1_X3DI1zYQU6GrHJQcHytx4rJ6DUWrSuc?usp=sharing
 
@@ -16,7 +16,7 @@ We use HDF5 format for the scRNA-Seq expressiong matrix, which stores the compre
 
 ### Usage
 ```
-python nnict_format.py -i input_file -o output_prefix -f format
+python actinn_format.py -i input_file -o output_prefix -f format
 ```
 
 ### Paramters
@@ -31,17 +31,17 @@ The output will be an HDF5 formated file named after the output prefix with ".h5
 
 #### Convert 10X format
 ```
-python nnict_format.py -i ./test_data/train_set_10x -o train_set -f 10X
+python actinn_format.py -i ./test_data/train_set_10x -o train_set -f 10X
 ```
 
 #### Convert txt format
 ```
-python nnict_format.py -i ./test_data/train_set.txt.gz -o train_set -f txt
+python actinn_format.py -i ./test_data/train_set.txt.gz -o train_set -f txt
 ```
 
 #### Convert csv format
 ```
-python nnict_format.py -i ./test_data/train_set.csv.gz -o train_set -f csv
+python actinn_format.py -i ./test_data/train_set.csv.gz -o train_set -f csv
 ```
 
 ## Predict cell types
@@ -49,7 +49,7 @@ We train a 4 layer (3 hidden layers) neural network on scRNA-Seq datasets with p
 
 ### Usage
 ```
-python nnict_predict.py -trs training_set -trl training_label -ts test_set -lr learning_rat -ne num_epoch -ms minibatch_size -pc print_cost
+python actinn_predict.py -trs training_set -trl training_label -ts test_set -lr learning_rat -ne num_epoch -ms minibatch_size -pc print_cost
 ```
 
 ### Parameters
@@ -66,5 +66,5 @@ The output will be a file named "predicted_label.txt". In the file, the first co
 
 ### Example
 ```
-python nnict_predict.py -trs ./test_data/train_set.h5 -trl ./test_data/train_label.txt.gz -ts ./test_data/test_set.h5 -lr 0.0001 -ne 50 -ms 128 -pc True
+python actinn_predict.py -trs ./test_data/train_set.h5 -trl ./test_data/train_label.txt.gz -ts ./test_data/test_set.h5 -lr 0.0001 -ne 50 -ms 128 -pc True
 ```
