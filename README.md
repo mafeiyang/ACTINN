@@ -2,6 +2,7 @@
 
 ## Overview
 ACTINN (Automated Cell Type Identification using Neural Networks) is a bioinformatic tool to quickly and accurately identify cell types in scRNA-Seq. For details, please read the paper:
+https://www.biorxiv.org/content/10.1101/532093v1?rss=1
 All datasets used in the paper are available here:
 https://drive.google.com/drive/folders/1_X3DI1zYQU6GrHJQcHytx4rJ6DUWrSuc?usp=sharing
 
