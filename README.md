@@ -50,7 +50,7 @@ We train a 4 layer (3 hidden layers) neural network on scRNA-Seq datasets with p
 
 ### Usage
 ```
-python actinn_predict.py -trs training_set -trl training_label -ts test_set -lr learning_rat -ne num_epoch -ms minibatch_size -pc print_cost
+python actinn_predict.py -trs training_set -trl training_label -ts test_set -lr learning_rat -ne num_epoch -ms minibatch_size -pc print_cost -op output_probability
 ```
 
 ### Parameters
