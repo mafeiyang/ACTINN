@@ -71,3 +71,7 @@ If the "op" parameter is set to True, there will be another output file named "p
 ```
 python actinn_predict.py -trs ./test_data/train_set.h5 -trl ./test_data/train_label.txt.gz -ts ./test_data/test_set.h5 -lr 0.0001 -ne 50 -ms 128 -pc True -op False
 ```
+
+### Plots
+![tSNE Plot]
+(https://github.com/mafeiyang/ACTINN/blob/master/tSNE_Example/tSNE_Plot.pdf)
