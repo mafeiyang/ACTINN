@@ -73,4 +73,4 @@ python actinn_predict.py -trs ./test_data/train_set.h5 -trl ./test_data/train_la
 ```
 
 ### Plots
-![tSNE Plot](https://github.com/mafeiyang/ACTINN/blob/master/tSNE_Example/tSNE_Plot.pdf)
+![tSNE Plot](https://github.com/mafeiyang/ACTINN/blob/master/tSNE_Example/tSNE_Plot.png)
