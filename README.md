@@ -60,7 +60,7 @@ python actinn_predict.py -trs training_set -trl training_label -ts test_set -lr 
 * -lr	Learning rate (default: 0.0001). We can increase the learning rate if the cost drops too slow, or decrease the learning rate if the cost drops super fast in the beginning and starts to fluctuate in later epochs.
 * -ne	Number of epochs (default: 50). The number of epochs can be determined by looking at the cost after each epoch. If the cost starts to decrease very slowly after ceartain epoch, then the "ne" parameter should be set to that epoch number. 
 * -ms	Minibatch size (default: 128). This parameter can be set larger when training a large dataset.
-* -pc	Print cost (default: True).
+* -pc	Print cost (default: True). Whether to print cost after each 5 epochs.
 * -op Output probabilities for each cell being the cell types in the training data (default: False).
 
 ### Output
