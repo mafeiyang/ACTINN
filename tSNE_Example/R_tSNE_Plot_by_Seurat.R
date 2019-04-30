@@ -15,7 +15,7 @@ sample <- CreateSeuratObject(raw.data = sample.data)
 sample <- NormalizeData(object = sample, normalization.method = "LogNormalize", 
                         scale.factor = 10000)
 
-# Find variable Genes and scale data by number of UMIs and Mito gene percentage
+# Find variable Genes and scale the data
 sample <- FindVariableGenes(object = sample)
 sample <- ScaleData(object = sample)
 
